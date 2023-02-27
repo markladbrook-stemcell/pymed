@@ -95,7 +95,7 @@ class PubMedArticle(object):
         try:
 
             # Get the publication elements
-            publication_date = xml_element.find(".//PubMedPubDate[@PubStatus='pubmed']")
+            publication_date = xml_element.find(".//ArticleDate")
             publication_year = int(getContent(publication_date, ".//Year", None))
             publication_month = int(getContent(publication_date, ".//Month", "1"))
             publication_day = int(getContent(publication_date, ".//Day", "1"))
